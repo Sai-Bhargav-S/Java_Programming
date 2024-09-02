@@ -6,41 +6,34 @@ import java.util.Scanner;
 
 public class SortArrays {
 
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        System.out.print("Enter the size of array: ");
-        int n=sc.nextInt();
-        System.out.println("Enter the Values of array: ");
-        int[] arr=new int[n];
+    public static boolean isPal(String str) {
 
-        for(int i=0;i<arr.length;i++){
-            arr[i]=sc.nextInt();
-        }
-
-        System.out.print("The given array is: ");
-        for(int i: arr){
-            System.out.print(i+" ");
-        }
-        System.out.println();
-
-        for(int i=0;i<arr.length;i++){
-            for(int j=0;j<arr.length-i-1;j++){
-                if(arr[j]>arr[j+1]){
-                    int temp=arr[j];
-                    arr[j]=arr[j+1];
-                    arr[j+1]=temp;
-                    System.out.println(arr.length-i-1);
-                }
+        int len =str.length();
+        String str2=str.trim().replaceAll("\\s", "").toLowerCase();
+        String str3=new String();
+        for(int i=0;i<len;i++){
+            if(str2.charAt(i)=='a' || str2.charAt(i)=='e' || str2.charAt(i)=='i' || str2.charAt(i)=='o' || str2.charAt(i)=='u'){
+                str3+=str2.charAt(i);
             }
         }
-       // Arrays.sort(arr);
 
-        System.out.println("The Sorted array is: ");
-        for(int i: arr){
-            System.out.print(i+" ");
+        int len2=str3.length();
+        for(int i=0;i<len2/2;i++){
+           if(str3.charAt(i)!=str3.charAt(len2-i-1)){
+               return false;
+           }
+         }
+        return true;
+
+    }
+
+    public static void main(String[] args) {
+        String str="a";
+        if(isPal(str)){
+            System.out.println("yes");
+        }else{
+            System.out.println("no");
         }
-
-
     }
     
 }
