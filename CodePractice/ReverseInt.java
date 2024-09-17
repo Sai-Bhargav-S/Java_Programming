@@ -1,7 +1,5 @@
-package CodePractice;
 
 import java.util.Scanner;
-
 public class ReverseInt {
 
     public static int reverseInt(int x){

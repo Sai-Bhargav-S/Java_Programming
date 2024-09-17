@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -25,8 +26,9 @@ public class StreamsExamples {
 
         //sum of numbers less than 10
         int result=s1.filter(n->n<10).map(n->n*2).reduce(0,(c,e)->c+e);
-        System.out.println(result);    
-        
+        System.out.println(result);  
+
+        Comparable
 
     }
     

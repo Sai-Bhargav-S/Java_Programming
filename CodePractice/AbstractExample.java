@@ -24,6 +24,10 @@ class Oneplus extends Mobile{
         System.out.println("changed to Blue color");
     }
 
+    public static void brand(){
+        System.err.println("Oneplus Mobile Brand");
+    }
+
     Oneplus(){
         System.out.println("Oneplus Constructor");
     }
@@ -33,10 +37,12 @@ class Oneplus extends Mobile{
 public class AbstractExample {
     public static void main(String[] args) {
         Oneplus oneplus=new Oneplus();
+        Mobile m =new Oneplus();
+        m.brand();
         oneplus.processor();
         oneplus.color();
         //oneplus.brand();
-
+        oneplus.brand();
         Mobile.brand();
         
     }

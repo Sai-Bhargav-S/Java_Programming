@@ -56,12 +56,6 @@ public class FunctionalInterfacesTypes {
         };
         System.out.println(bu.apply(23, 8));
 
-    
-
-
-
-
-
 
     }
     
